@@ -3,6 +3,11 @@ Sliding swipe menu
 A sliding menu that works with [touchSwipe](http://labs.rampinteractive.co.uk/touchSwipe/) library.
 
 
+Online demo
+-----------
+Visit [plugin site](http://joanclaret.github.io/sliding-swipe-menu)  
+
+
 What's the difference with other sliders?
 -----------
 
