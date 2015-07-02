@@ -1,3 +1,6 @@
+![Sliding swipe menu preview](http://joanclaret.github.io/sliding-swipe-menu/demo/img/swipe-github.png)
+
+
 Sliding swipe menu
 ========================================
 A sliding menu that works with [touchSwipe](http://labs.rampinteractive.co.uk/touchSwipe/) library.
@@ -5,7 +8,7 @@ A sliding menu that works with [touchSwipe](http://labs.rampinteractive.co.uk/to
 
 Online demo
 -----------
-Visit [plugin site](http://joanclaret.github.io/sliding-swipe-menu)  
+Visit [plugin site](http://joanclaret.github.io/sliding-swipe-menu)  or  [online demo](http://joanclaret.github.io/sliding-swipe-menu/demo/index.html)  
 
 
 What's the difference with other sliders?
