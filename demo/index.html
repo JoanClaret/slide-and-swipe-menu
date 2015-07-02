@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Sliding swipe Menu</title>
+        <title>Slide and Swipe Menu</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
         <!-- CSS stylesheet for example -->
@@ -9,16 +9,16 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
 
         <!-- CSS stylesheet for sliding-swipe-menu -->
-        <link rel="stylesheet" href="css/sliding-swipe-menu.css">
+        <link rel="stylesheet" href="css/slide-and-swipe-menu.css">
 
     </head>
     <body>
         <nav class="nav ssm-nav-visible">
             <img src="img/swipe.png" alt="swipe image" />
-            <p>Sliding Swipe Menu demo</p>
+            <p>Slide and Swipe Menu demo</p>
         </nav>
         <main>
-            <h1>Sliding Swipe Menu <br>(demo)</h1>
+            <h1>Slide and Swipe Menu <br>(demo)</h1>
             <a href="#" class="ssm-open-nav" title="open nav">open / close navigation</a>
         </main>   
 
@@ -29,13 +29,13 @@
         <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
         
         <!-- Slider Javascript file -->
-        <script src="../jquery.slidingswipemenu.js"></script>
+        <script src="../jquery.slideandswipe.js"></script>
 
         <div class="ssm-overlay visible" style="display:block;"></div>
 
         <script>
             $(document).ready(function() {
-                $('.nav').slidingSwipeMenu();
+                $('.nav').slideAndSwipe();
             });
         </script>
 

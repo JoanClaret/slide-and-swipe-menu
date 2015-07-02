@@ -1,14 +1,14 @@
-![Sliding swipe menu preview](http://joanclaret.github.io/sliding-swipe-menu/demo/img/swipe-github.png)
+![Slide and swipe menu preview](http://joanclaret.github.io/slide-on-swipe-menu/demo/img/swipe-github.png)
 
 
-Sliding swipe menu
+Slide and swipe menu
 ========================================
 A sliding menu that works with [touchSwipe](http://labs.rampinteractive.co.uk/touchSwipe/) library.
 
 
 Online demo
 -----------
-Visit [plugin site](http://joanclaret.github.io/sliding-swipe-menu)  or  [online demo](http://joanclaret.github.io/sliding-swipe-menu/demo/index.html)  
+Visit [plugin site](http://joanclaret.github.io/slide-and-swipe-menu)  or  [online demo](http://joanclaret.github.io/slide-and-swipe-menu/demo/index.html)  
 
 
 What's the difference with other sliders?
@@ -28,16 +28,16 @@ Installation
 Using bower
 
 ```bash
-bower install --save sliding-swipe-menu
+bower install --save slide-and-swipe-menu
 ```
 
 Using npm
 
 ```bash
-npm install sliding-swipe-menu
+npm install slide-and-swipe-menu
 ```
 
-or [download the plugin](https://github.com/JoanClaret/sliding-swipe-menu/archive/master.zip) from GitHub
+or [download the plugin](https://github.com/JoanClaret/slide-and-swipe-menu/archive/master.zip) from GitHub
 
 
 ### 2. Load the required files
@@ -50,7 +50,7 @@ or [download the plugin](https://github.com/JoanClaret/sliding-swipe-menu/archiv
 <script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
 
 <!-- Sliding swipe menu javascript file -->
-<script src="../jquery.slidingswipemenu.js"></script>
+<script src="../jquery.slideandswipe.js"></script>
 ```
 
 
@@ -76,7 +76,7 @@ Default initialization
 ```javascript
 <script>
     $(document).ready(function() {
-        $('nav').slidingSwipeMenu();
+        $('nav').slideAndSwipe();
     });
 </script>
 ```

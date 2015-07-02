@@ -32,7 +32,7 @@
 
     'use strict';
 
-    $.fn.slidingSwipeMenu = function(options) {
+    $.fn.slideAndSwipe = function(options) {
 
         var nav = $(this); // get the element to swipe
         var navWidth = -nav.outerWidth();

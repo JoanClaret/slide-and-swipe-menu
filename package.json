@@ -1,11 +1,11 @@
 {
-  "name": "sliding-swipe-menu",
+  "name": "slide-and-swipe-menu",
   "version": "1.0.0",
-  "description": "A sliding swipe menu that works with touchSwipe library",
+  "description": "A slide and swipe menu that works with touchSwipe library",
   "main": "jquery.slidingswipemenu.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joanclaret/sliding-swipe-menu.git"
+    "url": "https://github.com/joanclaret/slide-and-swipe-menu.git"
   },
   "keywords": [
     "slide",
@@ -26,9 +26,9 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/JoanClaret/sliding-swipe-menu/issues"
+    "url": "https://github.com/JoanClaret/slide-and-swipe-menu/issues"
   },
-  "homepage": "https://github.com/JoanClaret/sliding-swipe-menu",
+  "homepage": "https://github.com/JoanClaret/slide-and-swipe-menu",
   "dependencies": {
     "jquery": "~1",
     "jquery-touchswipe": "^1.6.7"
