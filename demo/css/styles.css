@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 ul * {
@@ -13,6 +13,11 @@ img {
     max-width: 100%;
 }
 
+html, 
+body {
+    height: 100%;
+}
+
 body {
     background-color: #f1f1f1;
     font-family: 'Open Sans';
@@ -22,20 +27,15 @@ body {
     text-align: center;
 }
 
-a{
-    color:#0A4A3C;
+a {
+    color: #0A4A3C;
 }
 
 h1 {
-    font-weight:normal;
-    font-size:50px;
+    font-weight: normal;
+    font-size: 50px;
 }
-nav.nav{
-    color:#fff;
-    z-index:12;
-}
-main{
-    position:relative;
-    z-index:10;
 
+nav.nav {
+    color: #fff;
 }
