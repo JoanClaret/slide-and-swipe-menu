@@ -1,0 +1,36 @@
+{
+  "name": "sliding-swipe-menu",
+  "version": "1.0.0",
+  "description": "A sliding swipe menu that works with touchSwipe library",
+  "main": "jquery.slidingswipemenu.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joanclaret/sliding-swipe-menu.git"
+  },
+  "keywords": [
+    "slide",
+    "navigation",
+    "swipe",
+    "menu",
+    "css",
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "author": {
+    "name": "Joan Claret",
+    "url": "https://github.com/JoanClaret"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/JoanClaret/sliding-swipe-menu/issues"
+  },
+  "homepage": "https://github.com/JoanClaret/sliding-swipe-menu",
+  "dependencies": {
+    "jquery": "~1",
+    "jquery-touchswipe": "^1.6.7"
+  }
+}

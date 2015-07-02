@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+
+ul * {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: #f1f1f1;
+    font-family: 'Open Sans';
+    color: #333;
+    margin: 0;
+    padding: 50px 15px;
+    text-align: center;
+}
+
+a{
+    color:#0A4A3C;
+}
+
+h1 {
+    font-weight:normal;
+    font-size:50px;
+}
+nav.nav{
+    color:#fff;
+    z-index:12;
+}
+main{
+    position:relative;
+    z-index:10;
+
+}
