@@ -117,7 +117,7 @@
             if(distance <= navWidth) {
                 distance = navWidth;
             }
-            if (isSafari() || isChrome()) {
+            if(isSafari() || isChrome()) {
                nav.css('-webkit-transform', 'translate(' + distance + 'px,0)');
             }
             else{
@@ -133,26 +133,25 @@
         /**
          * Open / close by click on burger icon
          */
-        var hideNavigation = (function(){
+        var hideNavigation = (function() {
             nav.removeClass('ssm-nav-visible');
             scrollNav(navWidth, settings.speed);
             $('html').css('overflow','visible');
             $('.ssm-overlay').fadeOut();
         });
 
-        var showNavigation = (function(){
+        var showNavigation = (function() {
             nav.addClass('ssm-nav-visible');
             scrollNav(0, settings.speed);       
         });
 
-        $('.ssm-open-nav').click(function(){
-            if(nav.hasClass('ssm-nav-visible')){
+        $('.ssm-open-nav').click(function() {
+            if(nav.hasClass('ssm-nav-visible')) {
                 hideNavigation();
             }
             else{
                 showNavigation();
             }
         });
-        
     };
 })(window.jQuery || window.$, document, window);
