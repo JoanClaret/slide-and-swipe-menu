@@ -5,10 +5,12 @@ nav{
     height:100%;
     width: 280px;
     background-color: #0a4a3c;
-    position: absolute;
     left:0;
     top:0;
     z-index: 2;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: visible;
 }
 .ssm-overlay{
 	position: fixed;
@@ -18,4 +20,5 @@ nav{
 	left:0;
 	background-color:rgba(0,0,0,.2);
     display:none;
+    z-index:1;
 }

@@ -12,6 +12,9 @@ ul * {
 img {
     max-width: 100%;
 }
+html, body{
+    height:100%;
+}
 
 body {
     background-color: #f1f1f1;
@@ -32,10 +35,7 @@ h1 {
 }
 nav.nav{
     color:#fff;
-    z-index:12;
 }
 main{
-    position:relative;
-    z-index:10;
 
 }
