@@ -1,5 +1,5 @@
 /**
- * A Sliding manu with swipe
+ * Slide and swipe menu (https://github.com/JoanClaret/slide-and-swipe-menu)
  *
  * @copyright Copyright 2013-2015 Joan claret
  * @license   MIT

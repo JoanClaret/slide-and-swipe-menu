@@ -17,7 +17,7 @@ What's the difference with other sliders?
 This plugin uses CSS3 transform property to move the navigation. That's why it works smoothly. Because [performance matters](http://perf.rocks/).
 
 * Only 1 js file (+ jQuery + touchSwipe)
-* 2Kb minified
+* 1Kb minified
 
 
 Installation
