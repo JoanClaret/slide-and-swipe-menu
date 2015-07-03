@@ -1,4 +1,4 @@
-![Slide and swipe menu preview](http://joanclaret.github.io/slide-and-swipe-menu/demo/img/swipe-github.png)
+![Slide and swipe menu preview](http://joanclaret.github.io/slide-and-swipe-menu/demo/img/swipe-github-demo.png)
 
 
 Slide and swipe menu
