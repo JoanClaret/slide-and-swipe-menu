@@ -1,0 +1,8 @@
+.DS_Store
+.project
+.settings
+*.log
+*~
+/node_modules
+/bower_components
+/test
