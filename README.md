@@ -37,7 +37,7 @@ bower install --save slide-and-swipe-menu
 Using npm
 
 ```bash
-npm install slide-and-swipe-menu
+npm install slide-and-swipe-menu --save
 ```
 
 or [download the plugin](https://github.com/JoanClaret/slide-and-swipe-menu/archive/master.zip) from GitHub
