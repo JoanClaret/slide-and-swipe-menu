@@ -8,7 +8,10 @@ A sliding menu that works with [touchSwipe](http://labs.rampinteractive.co.uk/to
 
 Online demo
 -----------
-Visit [plugin site](http://joanclaret.github.io/slide-and-swipe-menu)  or  [online demo](http://joanclaret.github.io/slide-and-swipe-menu/demo/index.html)  
+Visit [plugin site](http://joanclaret.github.io/slide-and-swipe-menu)  or  [online demo](http://joanclaret.github.io/slide-and-swipe-menu/demo/index.html).
+
+[Appszoom](http://www.appszoom.com) also uses it! So cool!
+
 
 
 What's the difference with other sliders?
