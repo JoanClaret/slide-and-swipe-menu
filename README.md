@@ -45,6 +45,8 @@ or [download the plugin](https://github.com/JoanClaret/slide-and-swipe-menu/arch
 
 ### 2. Load the required files
 
+Load them in the html
+
 ```html
 <!-- jQuery library (served from Google) -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -54,6 +56,12 @@ or [download the plugin](https://github.com/JoanClaret/slide-and-swipe-menu/arch
 
 <!-- Sliding swipe menu javascript file -->
 <script src="../jquery.slideandswipe.js"></script>
+```
+
+or use Browserify
+
+```javascript
+require('slideAndSwipe');
 ```
 
 
