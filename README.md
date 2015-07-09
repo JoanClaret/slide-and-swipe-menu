@@ -31,7 +31,7 @@ Installation
 Using bower
 
 ```bash
-bower install --save slide-and-swipe-menu
+bower install slide-and-swipe-menu --save
 ```
 
 Using npm
@@ -91,6 +91,9 @@ Default initialization
     });
 </script>
 ```
+
+### 5. Star the repository
+★ Star [this repo](https://github.com/JoanClaret/slide-and-swipe-menu) in order to stay updated with news about this plugin
 
 
 License
