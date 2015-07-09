@@ -92,8 +92,8 @@ Default initialization
 </script>
 ```
 
-### 5. Star the repository
-★ Star [this repo](https://github.com/JoanClaret/slide-and-swipe-menu) in order to stay updated with news about this plugin
+### 5. Follow the repository
+★ Star and watch [this repo](https://github.com/JoanClaret/slide-and-swipe-menu) in order to stay updated with news about this plugin
 
 
 License
