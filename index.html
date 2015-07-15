@@ -1,141 +1,63 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Slide and swipe menu by JoanClaret</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Slide and swipe menu</h1>
-      <h2 class="project-tagline">A sliding swipe menu that works with touchSwipe library.</h2>
-      <a href="https://github.com/JoanClaret/slide-and-swipe-menu" class="btn">View on GitHub</a>
-      <a href="https://github.com/JoanClaret/slide-and-swipe-menu/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/JoanClaret/slide-and-swipe-menu/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Slide and swipe menu</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- CSS stylesheet for sliding-swipe-menu -->
+        <link rel="stylesheet" href="assets/css/slide-and-swipe-menu.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
 
-    <section class="main-content">
-      <p><img src="http://joanclaret.github.io/slide-and-swipe-menu/demo/img/swipe-github-demo.png" alt="Slide and swipe menu preview"></p>
+		<!-- Header -->
+			<header id="header">
+				<h1>Slide and swipe menu</h1>
+				<p>A sliding menu that works with <a href="http://labs.rampinteractive.co.uk/touchSwipe/demos/index.html" title="touchSwipe">touchSwipe</a> library.</p>
+				<a class="j-button icon fa-download" href="#" title="Download">Download</a>
+				<a class="j-button outlined icon fa-github" href="#" title="View on github">View on github</a>
+			</header>
+			<nav class="examplenav text-center">
+			<br>
+				<img src="images/swipeme.png" alt="swipeme" width="103"/>
+				<img src="images/swipe.png" alt="swipe image" />
+			</nav>
 
-<h1>
-<a id="slide-and-swipe-menu" class="anchor" href="#slide-and-swipe-menu" aria-hidden="true"><span class="octicon octicon-link"></span></a>Slide and swipe menu</h1>
+			<a class="open-navigation ssm-open-nav" href="#" title=""><i class="fa fa-bars"></i> <img src="images/openme.png" height="40" alt="alt-text" /></a>
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="http://www.dribbble.com/dpam23" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="https://github.com/JoanClaret" class="icon fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://es.linkedin.com/pub/joan-claret/1b/93a/375" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:dpam23@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; <a href="joanclaret.github.io">Joan Claret</a></li>
+				</ul>
+			</footer>
 
-<p>A sliding menu that works with <a href="http://labs.rampinteractive.co.uk/touchSwipe/">touchSwipe</a> library.</p>
+			<!-- jQuery library (served from Google) -->
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-<h2>
-<a id="online-demo" class="anchor" href="#online-demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Online demo</h2>
+			<!-- touchSwipe library -->
+			<script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
 
-<p>Visit <a href="http://joanclaret.github.io/slide-and-swipe-menu">plugin site</a>  or  <a href="http://joanclaret.github.io/slide-and-swipe-menu/demo/index.html">online demo</a>.</p>
+			<!-- Sliding swipe menu javascript file -->
+			<script src="jquery.slideandswipe.js"></script>
 
-<p><a href="http://www.appszoom.com">Appszoom</a> also uses it! So cool!</p>
+			<script>
+			    $(document).ready(function() {
+			        $('nav.examplenav').slideAndSwipe();
+			    });
+			</script>
 
-<h2>
-<a id="whats-the-difference-with-other-sliders" class="anchor" href="#whats-the-difference-with-other-sliders" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's the difference with other sliders?</h2>
+		<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
 
-<p>This plugin uses CSS3 transform property to move the navigation. That's why it works smoothly. Because <a href="http://perf.rocks/">performance matters</a>.</p>
-
-<ul>
-<li>Only 1 js file (+ jQuery + touchSwipe)</li>
-<li>1Kb minified</li>
-</ul>
-
-<h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
-
-<h3>
-<a id="1-grab-a-copy-of-the-plugin" class="anchor" href="#1-grab-a-copy-of-the-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Grab a copy of the plugin</h3>
-
-<p>Using bower</p>
-
-<div class="highlight highlight-bash"><pre>bower install --save slide-and-swipe-menu</pre></div>
-
-<p>Using npm</p>
-
-<div class="highlight highlight-bash"><pre>npm install slide-and-swipe-menu --save</pre></div>
-
-<p>or <a href="https://github.com/JoanClaret/slide-and-swipe-menu/archive/master.zip">download the plugin</a> from GitHub</p>
-
-<h3>
-<a id="2-load-the-required-files" class="anchor" href="#2-load-the-required-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Load the required files</h3>
-
-<p>Load them in the html</p>
-
-<div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- jQuery library (served from Google) --&gt;</span>
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-
-<span class="pl-c">&lt;!-- touchSwipe library --&gt;</span>
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-
-<span class="pl-c">&lt;!-- Sliding swipe menu javascript file --&gt;</span>
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../jquery.slideandswipe.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
-
-<p>or use Browserify</p>
-
-<div class="highlight highlight-javascript"><pre><span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>slideAndSwipe<span class="pl-pds">'</span></span>);</pre></div>
-
-<h3>
-<a id="3-create-the-html-markup" class="anchor" href="#3-create-the-html-markup" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Create the HTML markup</h3>
-
-<div class="highlight highlight-html"><pre> &lt;<span class="pl-ent">body</span>&gt;
-    &lt;<span class="pl-ent">nav</span>&gt;
-        [...]
-    &lt;/<span class="pl-ent">nav</span>&gt;
-    &lt;<span class="pl-ent">main</span>&gt;
-        [...]
-        &lt;<span class="pl-ent">a</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>ssm-open-nav<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>#<span class="pl-pds">"</span></span> <span class="pl-e">title</span>=<span class="pl-s"><span class="pl-pds">"</span>Open / close<span class="pl-pds">"</span></span>&gt;Open / close&lt;/<span class="pl-ent">a</span>&gt;
-    &lt;/<span class="pl-ent">main</span>&gt;
-&lt;/<span class="pl-ent">body</span>&gt;</pre></div>
-
-<h3>
-<a id="4-initialize-the-plugin" class="anchor" href="#4-initialize-the-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Initialize the plugin</h3>
-
-<p>Default initialization</p>
-
-<div class="highlight highlight-javascript"><pre><span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
-    $(<span class="pl-c1">document</span>).ready(<span class="pl-k">function</span>() {
-        $(<span class="pl-s"><span class="pl-pds">'</span>nav<span class="pl-pds">'</span></span>).slideAndSwipe();
-    });
-<span class="pl-k">&lt;</span>/script<span class="pl-k">&gt;</span></pre></div>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
-
-<pre><code>The MIT License (MIT)
-
-Copyright (c) 2015 Joan Claret
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-</code></pre>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/JoanClaret/slide-and-swipe-menu">Slide and swipe menu</a> is maintained by <a href="https://github.com/JoanClaret">JoanClaret</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+	</body>
 </html>
-
