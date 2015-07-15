@@ -1281,8 +1281,9 @@ nav{
 .text-center{
 	text-align:center;
 }
-#footer{
-	position: absolute;
-	  z-index: 1;
+@media screen and (min-width: 1200px) {
+	body {
+		background-size: 100% auto;
+	}
 }
 
