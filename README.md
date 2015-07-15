@@ -76,6 +76,7 @@ require('slideAndSwipe');
         [...]
         <a class="ssm-open-nav" href="#" title="Open / close">Open / close</a>
     </main>
+    <div class="ssm-overlay"></div>
 </body>
 ```
 
@@ -92,7 +93,37 @@ Default initialization
 </script>
 ```
 
-### 5. Follow the repository
+### 5. Add some CSS
+
+```css
+/* navigation */
+nav {
+    height: 100%;
+    width: 280px;
+    background-color: #0a4a3c;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: visible;
+    transform: translate(-280px,0);
+}
+/* overlay layer */
+.ssm-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.2);
+    display: none;
+    z-index: 1;
+}
+```
+
+
+### 6. Follow the repository
 ★ Star and watch [this repo](https://github.com/JoanClaret/slide-and-swipe-menu) in order to stay updated with news about this plugin
 
 
