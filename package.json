@@ -1,6 +1,6 @@
 {
   "name": "slide-and-swipe-menu",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A slide and swipe menu that works with touchSwipe library",
   "main": "jquery.slidingswipemenu.js",
   "repository": {
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/JoanClaret/slide-and-swipe-menu/issues"
   },
-  "homepage": "https://github.com/JoanClaret/slide-and-swipe-menu",
+  "homepage": "http://joanclaret.github.io/slide-and-swipe-menu/",
   "dependencies": {
     "jquery": "~1",
     "jquery-touchswipe": "^1.6.7"
