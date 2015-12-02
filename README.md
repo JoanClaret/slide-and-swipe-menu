@@ -31,13 +31,13 @@ Installation
 Using bower
 
 ```bash
-bower install slide-and-swipe-menu --save
+bower install slide-and-swipe-menu --save-dev
 ```
 
 Using npm
 
 ```bash
-npm install slide-and-swipe-menu --save
+npm install slide-and-swipe-menu --save-dev
 ```
 
 or [download the plugin](https://github.com/JoanClaret/slide-and-swipe-menu/archive/master.zip) from GitHub
