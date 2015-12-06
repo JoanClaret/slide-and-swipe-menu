@@ -5,6 +5,8 @@ Slide and swipe menu
 ========================================
 A sliding menu that works with [touchSwipe](http://labs.rampinteractive.co.uk/touchSwipe/) library.
 
+[![npm version](https://badge.fury.io/js/slide-and-swipe-menu.svg)](https://badge.fury.io/js/slide-and-swipe-menu)
+
 
 Online demo
 -----------
