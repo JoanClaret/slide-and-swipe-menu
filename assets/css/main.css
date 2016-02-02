@@ -105,7 +105,7 @@
 
 		body > * {
 			position: relative;
-			z-index: 2;
+			
 		}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
