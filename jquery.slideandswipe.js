@@ -126,7 +126,7 @@
                    nav.css('transform', 'translate(' + distance + 'px,0)');
                 }
                 if(distance == '0') {
-                    $('.ssm-open-nav').addClass('ssm-nav-visible');
+                    $('.ssm-toggle-nav').addClass('ssm-nav-visible');
                     $('html').css('overflow','hidden');
                     $('.ssm-overlay').fadeIn();
                 }
@@ -147,7 +147,7 @@
                 scrollNav(0, settings.speed);       
             });
 
-            $('.ssm-open-nav').click(function() {
+            $('.ssm-toggle-nav').click(function() {
                 if(nav.hasClass('ssm-nav-visible')) {
                     hideNavigation();
                 }
