@@ -13,13 +13,13 @@
 
     </head>
     <body>
-        <nav class="nav ssm-nav-visible">
+        <nav class="nav">
             <img src="img/swipe.png" alt="swipe image" />
             <p>Slide and Swipe Menu demo</p>
         </nav>
         <main>
             <h1>Slide and Swipe Menu <br>(demo)</h1>
-            <a href="#" class="ssm-open-nav" title="open nav">open / close navigation</a>
+            <a href="#" class="ssm-toggle-nav" title="open nav">open / close navigation</a>
         </main>   
 
         <!-- jQuery library (served from Google) -->
@@ -31,7 +31,7 @@
         <!-- Slider Javascript file -->
         <script src="../jquery.slideandswipe.min.js"></script>
 
-        <div class="ssm-overlay"></div>
+        <div class="ssm-overlay ssm-toggle-nav"></div>
 
         <script>
             $(document).ready(function() {
