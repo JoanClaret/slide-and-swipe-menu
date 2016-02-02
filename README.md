@@ -76,9 +76,9 @@ require('slideAndSwipe');
     </nav>
     <main>
         [...]
-        <a class="ssm-open-nav" href="#" title="Open / close">Open / close</a>
+        <a class="ssm-toggle-nav" href="#" title="Open / close">Open / close</a>
     </main>
-    <div class="ssm-overlay"></div>
+    <div class="ssm-overlay ssm-toggle-nav"></div>
 </body>
 ```
 
