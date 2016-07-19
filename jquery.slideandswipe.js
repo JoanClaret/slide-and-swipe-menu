@@ -39,6 +39,7 @@
             var nav = $(this); // get the element to swipe
             var navWidth = -nav.outerWidth();
             var transInitial = navWidth;
+            var unit = 'px';
 
             // get settings
             var settings = $.extend({
@@ -48,8 +49,8 @@
                 threshold           : 100,
                 excludedElements    : 'label, button, input, select, textarea, .noSwipe',
                 speed               : 250,
-                cloneElement        : false
-
+                cloneElement        : false,
+                percentage          : false
             }, options );
 
             if (settings.cloneElement) {
@@ -61,6 +62,11 @@
                 });
                 nav.addClass('ssm-nav-cloned');
                 oldNav.after(nav);
+            }
+
+            if (settings.percentage) {
+              navWidth = -100;
+              unit = '%';
             }
 
             nav.swipe(settings);
@@ -132,10 +138,10 @@
                     distance = navWidth;
                 }
                 if(isSafari() || isChrome()) {
-                   nav.css('-webkit-transform', 'translate(' + distance + 'px,0)');
+                   nav.css('-webkit-transform', 'translate(' + distance + unit + ',0)');
                 }
                 else{
-                   nav.css('transform', 'translate(' + distance + 'px,0)');
+                   nav.css('transform', 'translate(' + distance + unit + ',0)');
                 }
                 if(distance == '0') {
                     $('.ssm-toggle-nav').addClass('ssm-nav-visible');
@@ -167,8 +173,6 @@
                     showNavigation();
                 }
             });
-
-
 
             $('.ssm-toggle-nav').bind('show-navigation', showNavigation);
             $('.ssm-toggle-nav').bind('hide-navigation', hideNavigation);
