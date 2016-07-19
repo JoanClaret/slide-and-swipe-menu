@@ -48,11 +48,11 @@
                 threshold           : 100,
                 excludedElements    : 'label, button, input, select, textarea, .noSwipe',
                 speed               : 250,
-                clone               : false
+                cloneElement        : false
 
             }, options );
 
-            if (settings.clone) {
+            if (settings.cloneElement) {
                 var oldNav = nav;
                 nav = oldNav.clone();
                 nav.attr('id', (oldNav.attr('id') || '') + '-clone');
@@ -167,6 +167,8 @@
                     showNavigation();
                 }
             });
+
+
 
             $('.ssm-toggle-nav').bind('show-navigation', showNavigation);
             $('.ssm-toggle-nav').bind('hide-navigation', hideNavigation);
