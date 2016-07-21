@@ -1,6 +1,6 @@
 {
   "name": "slide-and-swipe-menu",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A slide and swipe menu that works with touchSwipe library",
   "main": "jquery.slideandswipe.min.js",
   "repository": {
