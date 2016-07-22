@@ -63,7 +63,7 @@ Load them in the html
 or use Browserify
 
 ```javascript
-require('slideAndSwipe');
+require('slide-and-swipe-menu');
 ```
 
 
