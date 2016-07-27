@@ -123,7 +123,27 @@ nav {
     z-index: 1;
 }
 ```
+### 6. Clone Nav
+This is usefull when you need work only on device
+```javascript
+<script>
+    $(document).ready(function() {
+        $('nav').slideAndSwipe({
+            cloneElement: true
+        });
+    });
+</script>
+```
+### 7. Open / Close by triggering events
+```javascript
+<script>
+    // Hide Nav
+    jQuery('.ssm-toggle-nav').trigger('hide-navigation');
 
+    // Show nav
+    jQuery('.ssm-toggle-nav').trigger('show-navigation');
+</script>
+```
 
 ### Follow the repository
 ★ Star and watch [this repo](https://github.com/JoanClaret/slide-and-swipe-menu) in order to stay updated with news about this plugin
@@ -153,10 +173,10 @@ License
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
-    
+
 Other useful  plugins
 ---------------------
 * [Maximum Characters limit warning](https://github.com/JoanClaret/max-char-limit-warning): Get a warning when the max char limit has been exceeded with a jQuery plugin
-* [jcSlider](http://joanclaret.github.io/jcSlider): A responsive slider jQuery plugin with CSS animations 
-* [html5 canvas animation](http://joanclaret.github.io/html5-canvas-animation): 3D lines animation with three.js 
+* [jcSlider](http://joanclaret.github.io/jcSlider): A responsive slider jQuery plugin with CSS animations
+* [html5 canvas animation](http://joanclaret.github.io/html5-canvas-animation): 3D lines animation with three.js
 * [jquery dynamic max height](http://joanclaret.github.io/jquery-dynamic-max-height) : Dynamic max height plugin for jQuery with CSS animation
