@@ -147,13 +147,14 @@
                 scrollNav(0, settings.speed);       
             });
 
-            $('.ssm-toggle-nav').click(function() {
+            $('.ssm-toggle-nav').click(function(e) {
                 if(nav.hasClass('ssm-nav-visible')) {
                     hideNavigation();
                 }
                 else{
                     showNavigation();
                 }
+                e.preventDefault();
             });
         }
     ;
