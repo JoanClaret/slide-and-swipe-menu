@@ -122,6 +122,11 @@ nav {
     display: none;
     z-index: 1;
 }
+
+/* prevent scroll when nav is open */
+.is-navOpen{
+  overflow: hidden;
+}
 ```
 
 
