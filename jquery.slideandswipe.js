@@ -3,7 +3,7 @@
  *
  * @copyright Copyright 2013-2015 Joan claret
  * @license   MIT
- * @author    Joan Claret Teruel <dpam23 at gmail dot com>
+ * @author    Joan Claret Teruel <dpam23 at gmail dot com> | Lenivene Bezerra <lenivene at soufleet dot com>
  *
  * Licensed under The MIT License (MIT).
  * Copyright (c) Joan Claret Teruel <dpam23 at gmail dot com>
@@ -30,141 +30,198 @@
 
 ;(function($, document, window, undefined) {
 
-    'use strict';
+	'use strict';
 
-    var slideAndSwipe =
+	var slideAndSwipe =
 
-        $.fn.slideAndSwipe = function(options) {
+		$.fn.slideAndSwipe = function(options) {
 
-            var nav = $(this); // get the element to swipe
-            var navWidth = -nav.outerWidth();
-            var transInitial = navWidth;
+			var nav = $(this); // get the element to swipe
+			var navWidth = -nav.outerWidth();
+			var transInitial = navWidth;
 
-            // get settings
-            var settings = $.extend({
-                triggerOnTouchEnd   : true,
-                swipeStatus         : swipeStatus,
-                allowPageScroll     : 'vertical',
-                threshold           : 100,
-                excludedElements    : 'label, button, input, select, textarea, .noSwipe',
-                speed               : 250
+			if( "object" === typeof options && "boolean" === typeof options.hide ){
+				if( options.hide && "undefined" !== typeof hideNavigation ){
+					hideNavigation();
+				}
+			}
 
-            }, options );
+			if( "object" === typeof options && "boolean" === typeof options.show ){
+				if( options.show || options.show && ( "boolean" === typeof options.hide && ! options.hide ) ){
+					showNavigation();
+				}
+			}
 
-            nav.swipe(settings);
+			// get settings
+			var settings = $.extend({
+				triggerOnTouchEnd   : true,
+				swipeStatus         : swipeStatus,
+				allowPageScroll     : 'vertical',
+				threshold           : 100,
+				excludedElements    : 'label, button, input, select, textarea, .noSwipe',
+				speed               : 500
 
-            /**
-             * Catch each phase of the swipe.
-             * move : we drag the navigation
-             * cancel : open navigation
-             * end : close navigation
-             */
-            function swipeStatus(event, phase, direction, distance) {
-                if(phase == 'start') {
-                    if(nav.hasClass('ssm-nav-visible')) {
-                        transInitial = 0;
-                    } else {
-                        transInitial = navWidth;
-                    }
-                }
-                var mDistance;
+			}, options );
 
-                if (phase == 'move' && (direction == 'left')) {
-                    if(transInitial < 0) {
+			nav.swipe(settings);
 
-                        mDistance = transInitial - distance;
-                    } else {
-                        mDistance = -distance;
-                    }
+			/**
+			 * Catch each phase of the swipe.
+			 * move : we drag the navigation
+			 * cancel : open navigation
+			 * end : close navigation
+			 */
+			function swipeStatus(event, phase, direction, distance) {
+				if(phase == 'start') {
+					if(nav.hasClass('ssm-nav-visible')) {
+						transInitial = 0;
+					} else {
+						transInitial = navWidth;
+					}
+				}
+				var mDistance;
 
-                    scrollNav(mDistance, 0);
+				if (phase == 'move' && (direction == 'left')) {
+					if(transInitial < 0) {
 
-                } else if (phase == 'move' && direction == 'right') {
-                    if(transInitial < 0) {
-                        mDistance = transInitial + distance;
-                    } else {
-                        mDistance = distance;
-                    }
-                    scrollNav(mDistance, 0);
-                } else if (phase == 'cancel' && (direction == 'left') && transInitial === 0) {
-                    scrollNav(0, settings.speed);
-                } else if (phase == 'end' && (direction == 'left')) {
+						mDistance = transInitial - distance;
+					} else {
+						mDistance = -distance;
+					}
 
-                       hideNavigation();
-                } else if ((phase == 'end' || phase == 'cancel') && (direction == 'right')) {
-                    console.log('end');
-                }
-            }
+					scrollNav(mDistance, 0);
 
-            /**
-             * Browser detect
-             */
-            function isSafari() {
-                return /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-            }
+				} else if (phase == 'move' && direction == 'right') {
+					if(transInitial < 0) {
+						mDistance = transInitial + distance;
+					} else {
+						mDistance = distance;
+					}
+					scrollNav(mDistance, 0);
+				} else if (phase == 'cancel' && (direction == 'left') && transInitial === 0) {
+					scrollNav(0, settings.speed);
+				} else if (phase == 'end' && (direction == 'left')) {
 
-            function isChrome() {
-                return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-            }
+					   hideNavigation();
+				} else if ((phase == 'end' || phase == 'cancel') && (direction == 'right')) {
+					console.log('end');
+				}
+			}
 
-            /**
-             * Manually update the position of the nav on drag
-             */
-            function scrollNav(distance, duration) {
-                nav.css('transition-duration', (duration / 1000).toFixed(1) + 's');
+			/**
+			 * Browser detect
+			 */
+			function isSafari() {
+				return /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+			}
 
-                if(distance >= 0) {
-                    distance = 0;
-                }
-                if(distance <= navWidth) {
-                    distance = navWidth;
-                }
-                if(isSafari() || isChrome()) {
-                   nav.css('-webkit-transform', 'translate(' + distance + 'px,0)');
-                }
-                else{
-                   nav.css('transform', 'translate(' + distance + 'px,0)');
-                }
-                if(distance == '0') {
-                    $('.ssm-toggle-nav').addClass('ssm-nav-visible');
-                    $('html').addClass('is-navOpen');
-                    $('.ssm-overlay').fadeIn();
-                }
-            }
+			function isChrome() {
+				return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+			}
 
-            /**
-             * Open / close by click on burger icon
-             */
-            var hideNavigation = (function() {
-                nav.removeClass('ssm-nav-visible');
-                scrollNav(navWidth, settings.speed);
-                $('html').removeClass('is-navOpen');
-                $('.ssm-overlay').fadeOut();
-            });
+			/**
+			 * Manually update the position of the nav on drag
+			 */
+			function scrollNav(distance, duration) {
+				nav.css('transition-duration', (duration / 1000).toFixed(1) + 's');
 
-            var showNavigation = (function() {
-                nav.addClass('ssm-nav-visible');
-                scrollNav(0, settings.speed);
-            });
+				if(distance >= 0) {
+					distance = 0;
+				}
 
-            $('.ssm-toggle-nav').click(function(e) {
-                if(nav.hasClass('ssm-nav-visible')) {
-                    hideNavigation();
-                }
-                else{
-                    showNavigation();
-                }
-                e.preventDefault();
-            });
-        }
-    ;
+				if(distance <= navWidth) {
+					distance = navWidth;
+				}
+
+				if( distance < 0 ){
+					distance = (abs( distance ) / navWidth * 100);
+
+					if( distance > 0 )
+						distance = -distance;
+				}
+
+				if(isSafari() || isChrome()) {
+				   nav.css('-webkit-transform', 'translate(' + distance + '%,0)');
+				}
+				else{
+				   nav.css('transform', 'translate(' + distance + '%,0)');
+				}
+				if(distance == '0') {
+					$('.ssm-toggle-nav').addClass('ssm-nav-visible');
+					$('html').addClass('is-navOpen');
+					$('.ssm-overlay').fadeIn();
+				}
+			}
+
+			/**
+			 * Open / close by click on burger icon
+			 */
+			var hideNavigation = (function() {
+				nav.removeClass('ssm-nav-visible');
+				scrollNav(navWidth, settings.speed);
+				$('html').removeClass('is-navOpen');
+				$('.ssm-overlay').fadeOut();
+			});
+
+			var showNavigation = (function() {
+				nav.addClass('ssm-nav-visible');
+				scrollNav(0, settings.speed);
+			});
+
+			$('.ssm-toggle-nav').click(function(e) {
+				if( nav.hasClass('ssm-nav-visible') ){
+					hideNavigation();
+				}
+				else{
+					showNavigation();
+				}
+				e.preventDefault();
+			});
+
+			var objects = {};
+
+			// Check if is open
+			objects['isOpen'] = function(){
+				if( nav.hasClass('ssm-nav-visible') ){
+					return true;
+				}
+
+				return false;
+			}
+
+			// Close (hide) menu
+			objects['hide'] = function(){
+				if( "function" === typeof hideNavigation ){
+					hideNavigation();
+				}
+			}
+
+			// Open (show) menu
+			objects['show'] = function(){
+				if( "function" === typeof showNavigation ){
+					showNavigation();
+				}
+			}
+
+			// Open/close (hide/show) menu
+			objects['open'] = function(){
+				if( this.isOpen() ){
+					this.hide();
+				}
+				else{
+					this.show();
+				}
+			}
+
+			return objects;
+		}
+	;
 })(window.jQuery || window.$, document, window);
-
 
 
 /*
  * Export as a CommonJS module
  */
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = slideAndSwipe;
+	module.exports = slideAndSwipe;
 }
