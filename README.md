@@ -90,7 +90,19 @@ Default initialization
 ```javascript
 <script>
     $(document).ready(function() {
-        $('nav').slideAndSwipe();
+        var navigation = $('nav').slideAndSwipe();
+
+        // Check if is open
+        navigation.isOpen(); // return boolean
+
+        // Close (hide) menu
+        navigation.hide();
+
+        // Open (show) menu
+        navigation.show();
+
+        // Open/close (hide/show) menu
+        navigation.open();
     });
 </script>
 ```
