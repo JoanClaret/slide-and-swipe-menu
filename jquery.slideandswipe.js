@@ -59,7 +59,7 @@
 				allowPageScroll     : 'vertical',
 				threshold           : 100,
 				excludedElements    : 'label, button, input, select, textarea, .noSwipe',
-				speed               : 500
+				speed               : 250
 
 			}, options );
 
